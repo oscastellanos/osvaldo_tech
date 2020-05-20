@@ -14,6 +14,7 @@ import {
   Segment,
   Sidebar,
   Visibility,
+  Card
 } from 'semantic-ui-react'
 import { Route, Switch, Link } from "react-router-dom";
 import build from './Build.png';
@@ -215,10 +216,10 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              Welcome to osvaldo.tech
+              Welcome, my name is Osvaldo
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              I am a software developer with experience in full-stack development. 
+            I am a software developer that can enhance your data insights by developing applications, managing data pipelines, and deploying machine learning models that will optimize your workflows. 
             </p>
             {/* <Header as='h3' style={{ fontSize: '2em' }}>
               Deep Learning Done Right
@@ -231,15 +232,15 @@ const HomepageLayout = () => (
             <Image bordered rounded size='large' src={build}/>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        {/* <Grid.Row>
           <Grid.Column textAlign='center'>
             <Button size='huge'>Check Them Out</Button>
           </Grid.Column>
-        </Grid.Row>
+        </Grid.Row> */}
       </Grid>
     </Segment>
 
-    <Segment style={{ padding: '0em' }} vertical>
+    {/* <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
@@ -258,19 +259,57 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Budgets!
+          Full Stack Experience
         </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          A web application that allows users to add revenue streams and monthly expenses, which allows them to easily calculate and visualize budgets.
-        </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
+        <Card.Group itemsPerRow={3}>
+          <Card>
+            <Card.Content>
+              <Card.Header>Front-End</Card.Header>
+              <Card.Meta>
+                <span className='date'></span>
+              </Card.Meta>
+              <Card.Description>
+              <List >
+                <List.Item>Angular</List.Item>
+                <List.Item>React</List.Item>
+                <List.Item>Semantic UI</List.Item>
+              </List>
+              </Card.Description>
+            </Card.Content>
+          </Card>
+          <Card>
+            <Card.Content>
+              <Card.Header>Back-End</Card.Header>
+              <Card.Meta>
+                <span className='date'></span>
+              </Card.Meta>
+              <Card.Description>
+                <List.Item>Node.js</List.Item>
+                <List.Item>Express.js</List.Item>
+                <List.Item>Flask</List.Item>
+              </Card.Description>
+            </Card.Content>
+          </Card>
+          <Card>
+            <Card.Content>
+              <Card.Header>Databases</Card.Header>
+              <Card.Meta>
+                <span className='date'></span>
+              </Card.Meta>
+              <Card.Description>
+                <List.Item>MongoDB</List.Item>
+                <List.Item>Datastore</List.Item>
+                <List.Item>MySQL</List.Item>
+                <List.Item>PostgreSQL</List.Item>
+              </Card.Description>
+            </Card.Content>
+          </Card>
+        </Card.Group>
 
         <Divider
           as='h4'
@@ -278,19 +317,40 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Upcoming</a>
+          <a href='#'></a>
         </Divider>
-
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Personalized To Do List
+        Programming languages I'm well versed in:
         </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          I've been on the hunt for the perfect To Do tasking system for a few years now. There's no short supply on apps that provide feature-rich experiences.
-          However, I needed something more customizable to keep track of my projects in different domains. 
-        </p>
-        <Button as='a' size='large'>
-          I'm Curious to Find Out More
-        </Button>
+        {/* <p style={{ fontSize: '1.33em' }}>
+          Programming languages I'm well versed in:
+        </p> */}
+        <List horizontal size="big">
+          <List.Item>
+            <Icon name='python' />
+            <List.Content>
+              <List.Header>Python</List.Header>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <Icon name='coffee' />
+            <List.Content>
+              <List.Header>Java</List.Header>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <Icon name='node js' />
+            <List.Content>
+              <List.Header>JavaScript</List.Header>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <Icon name='rebel' />
+            <List.Content>
+              <List.Header>C++</List.Header>
+            </List.Content>
+          </List.Item>
+        </List>
       </Container>
     </Segment>
 
@@ -298,28 +358,61 @@ const HomepageLayout = () => (
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
+            <Grid.Column width={4}>
+              {/* <Header inverted as='h4' content='Contact Me' /> */}
               <List link inverted>
-                <List.Item as='a'>Contact Me</List.Item>
+                <List.Item>
+                  <List.Icon name='marker' />
+                  <List.Content>Austin, TX</List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name='phone' />
+                  <List.Content>(512) 400-8604</List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name='mail' />
+                  <List.Content>
+                    <a href='mailto:dev@osvaldo.tech'>dev@osvaldo.tech</a>
+                  </List.Content>
+                </List.Item>
               </List>
             </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
+            <Grid.Column width={8}>
+              {/* <Header inverted as='h4' content='Research' />
               <List link inverted>
-                <List.Item as='a'>APIs</List.Item>
-                <List.Item as='a'>Data Science</List.Item>
-                <List.Item as='a'>Deep Learning</List.Item>
+                <List.Item as='a'>Deep Reinforcement Learning</List.Item>
+                <List.Item as='a'>Natural Language Processing</List.Item>
+                <List.Item as='a'>Computer Vision</List.Item>
                 <List.Item as='a'>Favorite X-Men</List.Item>
-              </List>
+              </List> */}
             </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
+            <Grid.Column width={4}>
+              {/* <Header as='h4' inverted>
                 Last but not least, 
               </Header>
               <p>
                 Stay safe!
-              </p>
+              </p> */}
+              <List horizontal>
+                <List.Item>
+                  <List.Icon name='github' />
+                  <List.Content>
+                  <a href="https://github.com/oscastellanos" target="_blank" >oscastellanos</a>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name='twitter' />
+                  <List.Content>
+                  <a href="https://twitter.com/castellanos_os" target="_blank" >@castellanos_os</a>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name='linkedin'/>
+                  <List.Content>
+                    <a href="https://www.linkedin.com/in/osvaldo-castellanos/" target="_blank" >osvaldo-castellanos</a>
+                  </List.Content>
+                </List.Item>
+              </List>
             </Grid.Column>
           </Grid.Row>
         </Grid>
